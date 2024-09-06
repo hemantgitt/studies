@@ -1,0 +1,11 @@
+useState in React
+
+useState is a hook that lets you add state to functional components. It returns an array with two values: the current state and a function to update it.
+
+const [state, setState] = useState(initialState);
+
+Key Concepts:
+
+1: State Variable: The first element of the array is the current value of the state.
+2: State Setter Function: The second element is the function used to update the state.
+3: Initial State: The state can be initialized with a value or function.

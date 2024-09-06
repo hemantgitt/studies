@@ -1,0 +1,30 @@
+useEffect in React
+
+The useEffect hook allows you to perform side effects in functional components. Side effects include fetching data, updating the DOM, setting up subscriptions, and more. This hook runs after the render, and by default, it runs after every render unless configured otherwise.
+
+useEffect(() => {
+  // Your side effect logic here
+}, [dependencies]);
+
+Key Concepts:
+* Side Effects: These are operations that affect something outside the component (like network requests, subscriptions, etc.)
+
+Dependency Array: Controls when the effect is executed:
+
+1: If the array is empty ([]), the effect runs once after the initial render (componentDidMount).
+2: If the array contains variables, the effect runs when any of the specified variables change (componentDidUpdate).
+3: If omitted, the effect runs after every render.
+4: Cleanup Function: When you return a function from useEffect, it runs as cleanup when the component is unmounted or before the effect is re-run (similar to componentWillUnmount).
+
+useEffect(() => {
+  const subscription = someAPICall();
+  return () => {
+    subscription.unsubscribe(); // Cleanup
+  };
+}, [someValue]);
+
+Common Use Cases:
+
+1: Data Fetching: Using useEffect to make API requests.
+2: Event Listeners: Setting up and cleaning up event listeners like scroll or resize.
+3: Timers: Using setTimeout or setInterval.

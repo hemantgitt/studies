@@ -1,0 +1,10 @@
+axios in React
+
+axios is a promise-based HTTP client used for making network requests in React (or any JavaScript environment). It simplifies the process of making GET, POST, PUT, DELETE, etc., requests and handling responses.
+
+Key Concepts:
+
+1: Promise-Based: axios returns a promise that resolves with the response object or rejects with an error.
+2: HTTP Methods: You can use various methods like .get(), .post(), .put(), .delete().
+3: Interceptors: You can intercept requests or responses to modify them (e.g., adding authentication tokens).
+4: Error Handling: You can handle errors using .catch() or try...catch for async/await syntax.
