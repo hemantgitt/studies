@@ -1,0 +1,37 @@
+Next.js is a React framework that enables server-side rendering (SSR), static site generation (SSG), and client-side rendering (CSR). It provides a way to build React applications with better performance and SEO out of the box, and it offers features like automatic page routing, dynamic routing, and API routes.
+
+Key Concepts in Next.js:
+Server Components vs. Client Components:
+
+Server Components are rendered on the server, and the result is sent as HTML to the client. They don't have client-side interactivity but are faster as they reduce client-side JavaScript overhead.
+Client Components are interactive React components rendered in the browser and handle client-side interactivity like handling events or managing local state.
+In Next.js 13+, you can explicitly define components to be server or client by adding use client at the top of a file for client components.
+
+How Next.js Manages Applications:
+
+Pages are created in the pages directory, and Next.js automatically handles routing based on the file structure.
+Layouts and App Directory (introduced in Next.js 13) help organize applications into modular components with shared layouts between pages.
+Data Fetching Methods like getStaticProps, getServerSideProps, and getStaticPaths control how data is fetched and rendered.
+Advantages of Next.js:
+
+Server-Side Rendering (SSR): Improves SEO and page load performance.
+Static Site Generation (SSG): Generates static HTML at build time, which can be served by a CDN for faster delivery.
+API Routes: Allows you to create backend APIs within your Next.js application.
+Image Optimization: Optimizes images automatically with built-in image components.
+Automatic Code Splitting: Ensures that each page only loads the JavaScript it needs.
+File-Based Routing: Simplifies routing by generating routes based on the folder and file structure.
+
+
+
+
+Summary of Key Differences and Advantages:
+Feature	Next.js 12	Next.js 13
+Server Components : 	Not available, all components run on the client : 	Available, reducing client-side JS payload
+
+Client Components  : 	All components are interactive and require JS :	Marked with use client only when necessary
+
+App Directory :	Not available, only pages/ routing :	Introduced for modular layouts and routing
+
+Layouts	Global or nested in individual components	Supports shared layouts across pages automatically
+Data Fetching	getServerSideProps, getStaticProps	More flexible with server and client components
+JavaScript Payload	Larger as everything is bundled to the client	Reduced by splitting server-side and client-side components

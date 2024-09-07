@@ -1,0 +1,22 @@
+Differences Between Next.js Older Versions and Next.js 13+:
+
+App Directory (Next.js 13):
+
+New folder-based approach that makes it easier to manage layouts and page structure.
+app/ directory is introduced for organizing pages and layouts more modularly compared to the pages/ directory.
+Server Components (Next.js 13):
+
+Introduces React Server Components, enabling components to render server-side by default, reducing client-side JavaScript payload.
+
+Streaming and Suspense (Next.js 13):
+
+Streaming allows content to progressively render on the page, improving the user experience.
+Suspense for server-rendered data fetching allows you to load parts of the page lazily while still rendering the shell of the page.
+Image and Font Optimization:
+
+Automatic font optimization to preload fonts, improving performance.
+Improved image optimization through better compression and lazy loading.
+Middleware and Edge Functions:
+
+Middleware allows you to execute logic before a request is completed, enabling things like redirection, authentication, and modifying responses.
+Edge Functions allow executing code closer to the user at the edge, improving performance.
